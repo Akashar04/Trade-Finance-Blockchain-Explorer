@@ -14,9 +14,12 @@ class Organization(SQLModel, table=True):
 
 class User(SQLModel, table=True):
     id: Optional[int] = Field(default=None, primary_key=True)
+
+    name: str                                # NEW
     email: str = Field(index=True, unique=True)
     hashed_password: str
 
+    role: str                                # NEW
     is_active: bool = Field(default=True)
 
     organization_id: Optional[int] = Field(
