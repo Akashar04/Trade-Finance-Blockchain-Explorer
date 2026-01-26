@@ -1,0 +1,15 @@
+Starting test...
+Testing password: 'Test@123'
+Success! Hash: $2b$12$dzJiWR2xj.K5AIgZ3sYx3eZmLnUPWrRkvMhE71ItHc3NJ2sbojtZC
+Hash length: 60
+
+Testing double hashing (hashing the hash)...
+Success! Hash of hash: $2b$12$BRRJKL.OlU6tKapzrXuwOuq6ddSjFofm9qb0mYSwnlWYuLHJwUKui
+
+Testing long password (73 chars)...
+Caught expected error for long password: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+Verification result: True
+SUCCESS: Password verified correctly
+
+Testing long password (73 chars)...
+Caught error for long password: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
